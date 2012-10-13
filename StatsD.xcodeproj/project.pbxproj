@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E22961FA162A041700BC5B8F /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E253459215BEE4470009F19D /* OCMock.framework */; };
 		E25342AF15BEB0970009F19D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25342AE15BEB0970009F19D /* Cocoa.framework */; };
 		E25342B915BEB0970009F19D /* StatsD.m in Sources */ = {isa = PBXBuildFile; fileRef = E25342B815BEB0970009F19D /* StatsD.m */; };
 		E25342C115BEB0970009F19D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25342C015BEB0970009F19D /* SenTestingKit.framework */; };
@@ -14,6 +15,11 @@
 		E25342C515BEB0970009F19D /* libStatsD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E25342AB15BEB0970009F19D /* libStatsD.a */; };
 		E25342CB15BEB0980009F19D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E25342C915BEB0980009F19D /* InfoPlist.strings */; };
 		E25342CE15BEB0980009F19D /* StatsDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E25342CD15BEB0980009F19D /* StatsDTests.m */; };
+		E253456F15BED2D70009F19D /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = E253456D15BED2D70009F19D /* GCDAsyncUdpSocket.h */; };
+		E253457015BED2D70009F19D /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E253456E15BED2D70009F19D /* GCDAsyncUdpSocket.m */; };
+		E253457115BED2D70009F19D /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E253456E15BED2D70009F19D /* GCDAsyncUdpSocket.m */; };
+		E253457215BEDF9D0009F19D /* StatsD.m in Sources */ = {isa = PBXBuildFile; fileRef = E25342B815BEB0970009F19D /* StatsD.m */; };
+		E253459315BEE4470009F19D /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E253459215BEE4470009F19D /* OCMock.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +31,19 @@
 			remoteInfo = StatsD;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E22961F9162A040200BC5B8F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				E22961FA162A041700BC5B8F /* OCMock.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E25342AB15BEB0970009F19D /* libStatsD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStatsD.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +60,9 @@
 		E25342CA15BEB0980009F19D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E25342CC15BEB0980009F19D /* StatsDTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatsDTests.h; sourceTree = "<group>"; };
 		E25342CD15BEB0980009F19D /* StatsDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatsDTests.m; sourceTree = "<group>"; };
+		E253456D15BED2D70009F19D /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = CocoaAsyncSocket/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		E253456E15BED2D70009F19D /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = CocoaAsyncSocket/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		E253459215BEE4470009F19D /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Vendor/OCMock/OSX/OCMock.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +81,7 @@
 				E25342C115BEB0970009F19D /* SenTestingKit.framework in Frameworks */,
 				E25342C215BEB0970009F19D /* Cocoa.framework in Frameworks */,
 				E25342C515BEB0970009F19D /* libStatsD.a in Frameworks */,
+				E253459315BEE4470009F19D /* OCMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +91,7 @@
 		E25342A015BEB0970009F19D = {
 			isa = PBXGroup;
 			children = (
+				E25342DA15BED2B30009F19D /* Vendor */,
 				E25342B415BEB0970009F19D /* StatsD */,
 				E25342C615BEB0970009F19D /* StatsDTests */,
 				E25342AD15BEB0970009F19D /* Frameworks */,
@@ -87,6 +111,7 @@
 		E25342AD15BEB0970009F19D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E253459215BEE4470009F19D /* OCMock.framework */,
 				E25342AE15BEB0970009F19D /* Cocoa.framework */,
 				E25342C015BEB0970009F19D /* SenTestingKit.framework */,
 				E25342B015BEB0970009F19D /* Other Frameworks */,
@@ -141,6 +166,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E25342DA15BED2B30009F19D /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				E253456D15BED2D70009F19D /* GCDAsyncUdpSocket.h */,
+				E253456E15BED2D70009F19D /* GCDAsyncUdpSocket.m */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -148,6 +182,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E253456F15BED2D70009F19D /* GCDAsyncUdpSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +213,7 @@
 				E25342BA15BEB0970009F19D /* Sources */,
 				E25342BB15BEB0970009F19D /* Frameworks */,
 				E25342BC15BEB0970009F19D /* Resources */,
+				E22961F9162A040200BC5B8F /* CopyFiles */,
 				E25342BD15BEB0970009F19D /* ShellScript */,
 			);
 			buildRules = (
@@ -196,7 +232,7 @@
 		E25342A215BEB0970009F19D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Newspaper Club";
 			};
 			buildConfigurationList = E25342A515BEB0970009F19D /* Build configuration list for PBXProject "StatsD" */;
@@ -205,6 +241,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = E25342A015BEB0970009F19D;
 			productRefGroup = E25342AC15BEB0970009F19D /* Products */;
@@ -250,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E25342B915BEB0970009F19D /* StatsD.m in Sources */,
+				E253457015BED2D70009F19D /* GCDAsyncUdpSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E25342CE15BEB0980009F19D /* StatsDTests.m in Sources */,
+				E253457115BED2D70009F19D /* GCDAsyncUdpSocket.m in Sources */,
+				E253457215BEDF9D0009F19D /* StatsD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +375,7 @@
 		E25342D215BEB0980009F19D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StatsD/StatsD-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -344,6 +385,7 @@
 		E25342D315BEB0980009F19D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StatsD/StatsD-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,7 +396,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)/Vendor/OCMock/OSX\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StatsD/StatsD-Prefix.pch";
 				INFOPLIST_FILE = "StatsDTests/StatsDTests-Info.plist";
@@ -367,7 +412,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)/Vendor/OCMock/OSX\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StatsD/StatsD-Prefix.pch";
 				INFOPLIST_FILE = "StatsDTests/StatsDTests-Info.plist";
@@ -395,6 +443,7 @@
 				E25342D315BEB0980009F19D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E25342D415BEB0980009F19D /* Build configuration list for PBXNativeTarget "StatsDTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +452,7 @@
 				E25342D615BEB0980009F19D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

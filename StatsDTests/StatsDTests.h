@@ -8,6 +8,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface StatsDTests : SenTestCase
+@interface StatsDTests : SenTestCase {
+}
 
 @end
