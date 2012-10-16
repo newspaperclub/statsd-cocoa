@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E25342AA15BEB0970009F19D"
-               BuildableName = "libStatsD.a"
+               BlueprintIdentifier = "E2296207162DB27D00BC5B8F"
+               BuildableName = "StatsD.framework"
                BlueprintName = "StatsD"
                ReferencedContainer = "container:StatsD.xcodeproj">
             </BuildableReference>

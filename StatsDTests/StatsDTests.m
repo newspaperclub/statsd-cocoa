@@ -7,7 +7,7 @@
 //
 
 #import "StatsDTests.h"
-#import "StatsD.h"
+#import <StatsD/StatsD.h>
 #import <OCMock/OCMock.h>
 
 @implementation StatsDTests
