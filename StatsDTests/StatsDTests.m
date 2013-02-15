@@ -92,12 +92,13 @@
         return [expectedData isEqualToData:data];
     }]];
     
-    [mockClient timing:@"statsd.test" block:^{
+    NSUInteger ms = [mockClient timing:@"statsd.test" block:^{
         NSDate *future = [NSDate dateWithTimeIntervalSinceNow:0.05];
         [NSThread sleepUntilDate:future];
     }];
     
     [mockClient verify];
+    STAssertEquals((NSUInteger)51, ms, @"response is 51ms");
 }
 
 //- (void)testLive

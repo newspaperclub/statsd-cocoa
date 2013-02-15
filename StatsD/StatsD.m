@@ -72,12 +72,13 @@
     [self send:stat value:ms type:@"ms" sampleRate:1.0];
 }
 
-- (void)timing:(NSString *)stat block:(void (^)(void))block {
+- (NSUInteger)timing:(NSString *)stat block:(void (^)(void))block {
     NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
     block();
     NSTimeInterval duration = [NSDate timeIntervalSinceReferenceDate] - start;
     NSInteger ms = round(duration * 1000);
     [self timing:stat ms:ms];
+    return ms;
 }
 
 - (void)send:(NSString *)stat

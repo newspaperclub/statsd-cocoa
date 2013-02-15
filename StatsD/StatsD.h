@@ -31,6 +31,6 @@
 - (void)count:(NSString *)stat delta:(NSInteger)delta sampleRate:(float)sampleRate;
 - (void)gauge:(NSString *)stat value:(NSInteger)value;
 - (void)timing:(NSString *)stat ms:(NSInteger)ms;
-- (void)timing:(NSString *)stat block:(void (^)(void))block;
+- (NSUInteger)timing:(NSString *)stat block:(void (^)(void))block;
 
 @end
