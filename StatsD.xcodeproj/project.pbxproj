@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E22961FA162A041700BC5B8F /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E253459215BEE4470009F19D /* OCMock.framework */; };
+		074414FB1FD04CA1B4F1A1B9 /* libPods-StatsDTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A647FA96F04B459643A9CB /* libPods-StatsDTests.a */; };
+		BE750D41C16D40E5A79F4985 /* libPods-StatsD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0FE0C463F34FDE8644EC46 /* libPods-StatsD.a */; };
 		E2296209162DB27D00BC5B8F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25342AE15BEB0970009F19D /* Cocoa.framework */; };
 		E2296217162DB35300BC5B8F /* StatsD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2296208162DB27D00BC5B8F /* StatsD.framework */; };
-		E229621A162DB38F00BC5B8F /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E253456E15BED2D70009F19D /* GCDAsyncUdpSocket.m */; };
-		E229621B162DB39200BC5B8F /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = E253456D15BED2D70009F19D /* GCDAsyncUdpSocket.h */; };
 		E229621C162DB39500BC5B8F /* StatsD.h in Headers */ = {isa = PBXBuildFile; fileRef = E25342B715BEB0970009F19D /* StatsD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E229621D162DB39900BC5B8F /* StatsD-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E25342B615BEB0970009F19D /* StatsD-Prefix.pch */; };
 		E229621E162DB40B00BC5B8F /* StatsD.m in Sources */ = {isa = PBXBuildFile; fileRef = E25342B815BEB0970009F19D /* StatsD.m */; };
@@ -19,9 +18,7 @@
 		E25342C215BEB0970009F19D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25342AE15BEB0970009F19D /* Cocoa.framework */; };
 		E25342CB15BEB0980009F19D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E25342C915BEB0980009F19D /* InfoPlist.strings */; };
 		E25342CE15BEB0980009F19D /* StatsDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E25342CD15BEB0980009F19D /* StatsDTests.m */; };
-		E253457115BED2D70009F19D /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E253456E15BED2D70009F19D /* GCDAsyncUdpSocket.m */; };
 		E253457215BEDF9D0009F19D /* StatsD.m in Sources */ = {isa = PBXBuildFile; fileRef = E25342B815BEB0970009F19D /* StatsD.m */; };
-		E253459315BEE4470009F19D /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E253459215BEE4470009F19D /* OCMock.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,18 +28,17 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				E22961FA162A041700BC5B8F /* OCMock.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		562F9103D9ED46D6B586C346 /* Pods-StatsDTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StatsDTests.xcconfig"; path = "Pods/Pods-StatsDTests.xcconfig"; sourceTree = "<group>"; };
+		7A55F4C18C2F4A4484B23D4E /* Pods-StatsD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StatsD.xcconfig"; path = "Pods/Pods-StatsD.xcconfig"; sourceTree = "<group>"; };
+		BF79CAB1E46B457EB1C51776 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E2296208162DB27D00BC5B8F /* StatsD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StatsD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25342AE15BEB0970009F19D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		E25342B115BEB0970009F19D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		E25342B215BEB0970009F19D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		E25342B315BEB0970009F19D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E25342B615BEB0970009F19D /* StatsD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StatsD-Prefix.pch"; sourceTree = "<group>"; };
 		E25342B715BEB0970009F19D /* StatsD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatsD.h; sourceTree = "<group>"; };
 		E25342B815BEB0970009F19D /* StatsD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatsD.m; sourceTree = "<group>"; };
@@ -52,9 +48,8 @@
 		E25342CA15BEB0980009F19D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E25342CC15BEB0980009F19D /* StatsDTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatsDTests.h; sourceTree = "<group>"; };
 		E25342CD15BEB0980009F19D /* StatsDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatsDTests.m; sourceTree = "<group>"; };
-		E253456D15BED2D70009F19D /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = CocoaAsyncSocket/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		E253456E15BED2D70009F19D /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = CocoaAsyncSocket/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
-		E253459215BEE4470009F19D /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Vendor/OCMock/OSX/OCMock.framework; sourceTree = "<group>"; };
+		F7A647FA96F04B459643A9CB /* libPods-StatsDTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StatsDTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0FE0C463F34FDE8644EC46 /* libPods-StatsD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StatsD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2296209162DB27D00BC5B8F /* Cocoa.framework in Frameworks */,
+				BE750D41C16D40E5A79F4985 /* libPods-StatsD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,8 +68,8 @@
 			files = (
 				E25342C115BEB0970009F19D /* SenTestingKit.framework in Frameworks */,
 				E25342C215BEB0970009F19D /* Cocoa.framework in Frameworks */,
-				E253459315BEE4470009F19D /* OCMock.framework in Frameworks */,
 				E2296217162DB35300BC5B8F /* StatsD.framework in Frameworks */,
+				074414FB1FD04CA1B4F1A1B9 /* libPods-StatsDTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,11 +79,13 @@
 		E25342A015BEB0970009F19D = {
 			isa = PBXGroup;
 			children = (
-				E25342DA15BED2B30009F19D /* Vendor */,
 				E25342B415BEB0970009F19D /* StatsD */,
 				E25342C615BEB0970009F19D /* StatsDTests */,
 				E25342AD15BEB0970009F19D /* Frameworks */,
 				E25342AC15BEB0970009F19D /* Products */,
+				7A55F4C18C2F4A4484B23D4E /* Pods-StatsD.xcconfig */,
+				BF79CAB1E46B457EB1C51776 /* Pods.xcconfig */,
+				562F9103D9ED46D6B586C346 /* Pods-StatsDTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,22 +101,12 @@
 		E25342AD15BEB0970009F19D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E253459215BEE4470009F19D /* OCMock.framework */,
 				E25342AE15BEB0970009F19D /* Cocoa.framework */,
 				E25342C015BEB0970009F19D /* SenTestingKit.framework */,
-				E25342B015BEB0970009F19D /* Other Frameworks */,
+				F7A647FA96F04B459643A9CB /* libPods-StatsDTests.a */,
+				FA0FE0C463F34FDE8644EC46 /* libPods-StatsD.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E25342B015BEB0970009F19D /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E25342B115BEB0970009F19D /* AppKit.framework */,
-				E25342B215BEB0970009F19D /* CoreData.framework */,
-				E25342B315BEB0970009F19D /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		E25342B415BEB0970009F19D /* StatsD */ = {
@@ -158,15 +146,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E25342DA15BED2B30009F19D /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				E253456D15BED2D70009F19D /* GCDAsyncUdpSocket.h */,
-				E253456E15BED2D70009F19D /* GCDAsyncUdpSocket.m */,
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -174,7 +153,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E229621B162DB39200BC5B8F /* GCDAsyncUdpSocket.h in Headers */,
 				E229621C162DB39500BC5B8F /* StatsD.h in Headers */,
 				E229621D162DB39900BC5B8F /* StatsD-Prefix.pch in Headers */,
 			);
@@ -187,10 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2296214162DB27D00BC5B8F /* Build configuration list for PBXNativeTarget "StatsD" */;
 			buildPhases = (
+				837440FD21E04B008467D72F /* Check Pods Manifest.lock */,
 				E2296203162DB27D00BC5B8F /* Sources */,
 				E2296204162DB27D00BC5B8F /* Frameworks */,
 				E2296205162DB27D00BC5B8F /* Headers */,
 				E2296206162DB27D00BC5B8F /* Resources */,
+				9862D620509D4152BF4A22F5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,11 +185,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E25342D415BEB0980009F19D /* Build configuration list for PBXNativeTarget "StatsDTests" */;
 			buildPhases = (
+				61E5008987AD40E5834F8FFB /* Check Pods Manifest.lock */,
 				E25342BA15BEB0970009F19D /* Sources */,
 				E25342BB15BEB0970009F19D /* Frameworks */,
 				E25342BC15BEB0970009F19D /* Resources */,
 				E22961F9162A040200BC5B8F /* CopyFiles */,
 				E25342BD15BEB0970009F19D /* ShellScript */,
+				0FA946CDF0A345CBB687CE3F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,7 +208,8 @@
 		E25342A215BEB0970009F19D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastTestingUpgradeCheck = 0510;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Newspaper Club";
 			};
 			buildConfigurationList = E25342A515BEB0970009F19D /* Build configuration list for PBXProject "StatsD" */;
@@ -267,6 +250,66 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0FA946CDF0A345CBB687CE3F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-StatsDTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61E5008987AD40E5834F8FFB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		837440FD21E04B008467D72F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9862D620509D4152BF4A22F5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-StatsD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E25342BD15BEB0970009F19D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,7 +330,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E229621A162DB38F00BC5B8F /* GCDAsyncUdpSocket.m in Sources */,
 				E229621E162DB40B00BC5B8F /* StatsD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +339,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E25342CE15BEB0980009F19D /* StatsDTests.m in Sources */,
-				E253457115BED2D70009F19D /* GCDAsyncUdpSocket.m in Sources */,
 				E253457215BEDF9D0009F19D /* StatsD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +359,7 @@
 /* Begin XCBuildConfiguration section */
 		E2296215162DB27D00BC5B8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A55F4C18C2F4A4484B23D4E /* Pods-StatsD.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -335,6 +377,7 @@
 		};
 		E2296216162DB27D00BC5B8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A55F4C18C2F4A4484B23D4E /* Pods-StatsD.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -354,7 +397,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -382,7 +424,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -401,12 +442,10 @@
 		};
 		E25342D515BEB0980009F19D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 562F9103D9ED46D6B586C346 /* Pods-StatsDTests.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"$(SRCROOT)/Vendor/OCMock/OSX\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StatsD/StatsD-Prefix.pch";
 				INFOPLIST_FILE = "StatsDTests/StatsDTests-Info.plist";
@@ -417,12 +456,10 @@
 		};
 		E25342D615BEB0980009F19D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 562F9103D9ED46D6B586C346 /* Pods-StatsDTests.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"$(SRCROOT)/Vendor/OCMock/OSX\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StatsD/StatsD-Prefix.pch";
 				INFOPLIST_FILE = "StatsDTests/StatsDTests-Info.plist";
@@ -441,6 +478,7 @@
 				E2296216162DB27D00BC5B8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E25342A515BEB0970009F19D /* Build configuration list for PBXProject "StatsD" */ = {
 			isa = XCConfigurationList;
