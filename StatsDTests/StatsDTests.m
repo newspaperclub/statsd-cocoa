@@ -98,7 +98,7 @@
     }];
     
     [mockClient verify];
-    STAssertEquals((NSUInteger)51, ms, @"response is 51ms");
+    XCTAssertEqual((NSUInteger)51, ms, @"response is 51ms");
 }
 
 //- (void)testLive

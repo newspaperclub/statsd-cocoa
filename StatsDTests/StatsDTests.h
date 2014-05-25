@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Newspaper Club. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface StatsDTests : SenTestCase {
+@interface StatsDTests : XCTestCase {
 }
 
 @end
