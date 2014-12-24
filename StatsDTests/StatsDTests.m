@@ -12,6 +12,8 @@
 
 @implementation StatsDTests
 
+#pragma mark - Increment/decrement methods
+
 - (void)testIncrement
 {
     id mockClient = [OCMockObject partialMockForObject:[StatsD sharedClient]];
@@ -40,6 +42,8 @@
     [mockClient verify];
 }
 
+#pragma mark - Gauge tests
+
 - (void)testGauge
 {
     id mockClient = [OCMockObject partialMockForObject:[StatsD sharedClient]];
@@ -54,19 +58,53 @@
     [mockClient verify];
 }
 
+- (void)testMultiGauge
+{
+    id mockClient = [OCMockObject partialMockForObject:[StatsD sharedClient]];
+
+    NSData *expectedData = [@"statsd.test:1|g\nstatsd.test:2|g" dataUsingEncoding:NSASCIIStringEncoding];
+    [[mockClient expect] fireToSocket:[OCMArg checkWithBlock:^BOOL(NSData *data) {
+        return [expectedData isEqualToData:data];
+    }]];
+
+    NSInteger values[] = {1,2};
+    [mockClient gauge:@"statsd.test" values:values length:2];
+
+    [mockClient verify];
+}
+
+#pragma mark - Count tests
+
 - (void)testCount
 {
     id mockClient = [OCMockObject partialMockForObject:[StatsD sharedClient]];
-    
+
     NSData *expectedData = [@"statsd.test:2|c" dataUsingEncoding:NSASCIIStringEncoding];
     [[mockClient expect] fireToSocket:[OCMArg checkWithBlock:^BOOL(NSData *data) {
         return [expectedData isEqualToData:data];
     }]];
-    
+
     [mockClient count:@"statsd.test" delta:2 sampleRate:1.0];
-    
+
     [mockClient verify];
 }
+
+- (void)testMultiCount
+{
+    id mockClient = [OCMockObject partialMockForObject:[StatsD sharedClient]];
+
+    NSData *expectedData = [@"statsd.test:1|c\nstatsd.test:2|c" dataUsingEncoding:NSASCIIStringEncoding];
+    [[mockClient expect] fireToSocket:[OCMArg checkWithBlock:^BOOL(NSData *data) {
+        return [expectedData isEqualToData:data];
+    }]];
+
+    NSInteger values[] = {1,2};
+    [mockClient count:@"statsd.test" values:values length:2 sampleRate:1.0];
+
+    [mockClient verify];
+}
+
+#pragma mark - Timing tests
 
 - (void)testTiming
 {
@@ -79,6 +117,21 @@
     
     [mockClient timing:@"statsd.test" ms:200];
     
+    [mockClient verify];
+}
+
+- (void)testMultiTiming
+{
+    id mockClient = [OCMockObject partialMockForObject:[StatsD sharedClient]];
+
+    NSData *expectedData = [@"statsd.test:10|ms\nstatsd.test:20|ms" dataUsingEncoding:NSASCIIStringEncoding];
+    [[mockClient expect] fireToSocket:[OCMArg checkWithBlock:^BOOL(NSData *data) {
+        return [expectedData isEqualToData:data];
+    }]];
+
+    NSInteger values[] = {10, 20};
+    [mockClient timing:@"statsd.test" values:values length:2];
+
     [mockClient verify];
 }
 

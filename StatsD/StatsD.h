@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @class GCDAsyncUdpSocket;
 
 @interface StatsD : NSObject {
@@ -28,9 +29,15 @@
 
 - (void)increment:(NSString *)stat sampleRate:(float)sampleRate;
 - (void)decrement:(NSString *)stat sampleRate:(float)sampleRate;
+
 - (void)count:(NSString *)stat delta:(NSInteger)delta sampleRate:(float)sampleRate;
+- (void)count:(NSString *)stat values:(NSInteger[])delta length:(NSInteger)length sampleRate:(float)sampleRate;
+
 - (void)gauge:(NSString *)stat value:(NSInteger)value;
+- (void)gauge:(NSString *)stat values:(NSInteger[])values length:(NSInteger)length;
+
 - (void)timing:(NSString *)stat ms:(NSInteger)ms;
+- (void)timing:(NSString *)stat values:(NSInteger[])values length:(NSInteger)length;
 - (NSUInteger)timing:(NSString *)stat block:(void (^)(void))block;
 
 @end
